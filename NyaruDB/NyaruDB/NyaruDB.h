@@ -49,6 +49,9 @@
 
 
 #pragma mark - Collection
+//check if collection exist or not
+- (BOOL)isCollectionExist:(NSString *)name;
+    
 /**
  Get all collections.
  @return @[NyaruCollection]

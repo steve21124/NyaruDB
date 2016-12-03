@@ -115,6 +115,17 @@ static NyaruDB *_instance;
 
 
 #pragma mark - Collection
+- (BOOL)isCollectionExist:(NSString *)name {
+    if (name.length == 0U) { return NO; }
+    
+    NyaruCollection *result = _collections[name];
+    if (result) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
+}
 - (NyaruCollection *)collection:(NSString *)name
 {
     if (name.length == 0U) { return nil; }
